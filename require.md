@@ -5,7 +5,7 @@ It works with the following sequence of steps, **resolving > loading > wrapping 
 ```javascript
 console.log(module.paths) // shows the default paths where node searches for packages
 require('some-package') // the package is search in the paths above
-requre.resolve('some-package') // the package is resolved but not executed
+require.resolve('some-package') // the package is resolved but not executed
 ```
 
 We can load a full folder with `require('some-folder')`, it will execute either `node_modules/some-folder/index.js` (default) or the one parametrized  by the `node_modules/some-folder/packages.json` file:
@@ -13,7 +13,8 @@ We can load a full folder with `require('some-folder')`, it will execute either 
 ```javascript
 {
     "name":"some-folder",
-    "start":"start.js}
+    "start":"start.js"
+}
 ```
 
 ### Other ways of loading 
