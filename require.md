@@ -1,6 +1,6 @@
 # Require
 
-It works with the following sequence of steps, **resolving > loading > wrapping > evaluating > caching **. 
+It works with the following sequence of steps, **resolving > loading > wrapping > evaluating > caching**. 
 
 ```javascript
 console.log(module.paths) // shows the default paths where node searches for packages
