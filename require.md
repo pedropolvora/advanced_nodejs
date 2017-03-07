@@ -32,6 +32,7 @@ Node allows for circular dependency, this means that:
 ## Loading other types of files 
 
 When `require('some-file')` is invoked, it tries it looks for different types of files in this order:
+
 1. `some-file.js` a standard javascript file.
 1. `some-file.json` a JSON file.
 1. `some-file.node` a binary node file.
