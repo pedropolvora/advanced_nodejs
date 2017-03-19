@@ -2,7 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const dirname = path.join(__dirname, 'files2');
 
-fs.mkdirSync(dirname); // in case it does not exist create it
+try{
+	fs.mkdirSync(dirname); // in case it does not exist create it
+}catch(err){
+	if(err.code!=='EEXIST') throw err;
+}
+
 const ms1Day = 24*60*60*1000;
 
 for (let i=0; i<10 ;i++){
