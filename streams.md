@@ -6,6 +6,8 @@ Streams allow you to use piping in your node code and they might be the best/onl
 * [A big file generator](scripts/streams/bigFileMaker.js)
 * [A slow server without streaming](scripts/streams/server.js)
 * [A fast server with streaming](scripts/streams/serverStream.js)
+* [Writing a writeable stream](scripts/streams/writeable.js)
+* [Writing a readable stream](scripts/streams/readable.js)
 
 ### Types of streams
 
