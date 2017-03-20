@@ -34,14 +34,22 @@ scr.pipe(d1).pipe(d2).pipe(finalDest)
 // finalDest must be a writebale or duplex stream
 ```
 
-### Stream Events and Functions 
+### Stream Events, Functions and modes
 
 **Readable Streams**
 
-Events: `data,end,error,close,readable`
-Functions: `pipe(),unpipe(),read(),unshift(),resume(),...`
+* Events: `data,end,error,close,readable`
+* Functions: `pipe(),unpipe(),read(),unshift(),resume(),...`
+* Modes:
+    * `Paused` we have to use `stream.read()` to read from the stream
+    * `Flow` data is continous flowing and we need to use `events` to consume the data. Note that in this mode we can lose data if no consumer is listening. Adding an event handler **switches the stream from paused to flowing mode**.
+    * Another way to swtich between modes is using `stream.pause()` and stream.resume()` methods.
+
 
 **Writeable Streams**
 
-Events: `drain,finish,error,close,pipe/unpipe`
-Functions: `cork(),write(),end(),uncork(),...`
+* Events: `drain,finish,error,close,pipe/unpipe`
+* Functions: `cork(),write(),end(),uncork(),...`
+
+
+
