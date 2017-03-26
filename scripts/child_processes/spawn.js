@@ -18,5 +18,33 @@ find.stderr.on('data', (data)=>{
 
 // we can pipe from one child process to another
 find.stdout.pipe(wc.stdin);
-wc.on('data', (data) => console.log(`We have ${data} files here`);
+wc.stdout.on('data', (data) => console.log(`We have ${data} files here`));
 // wc.stdout.pipe(process.stdout); another way to output the wc command
+
+
+// ------------------
+// SPAWN WITH OPTIONS 
+// ------------------
+
+// we can also have more complicated spawn that (cwd) changes the working directory
+// and also includes a shell but still does not bufffer the result as the exec()
+// command does.
+
+const child = spawn('find . -type $TYPE | wc -l',{
+	stdio: 'inherit',
+	shell: true,
+	cwd: '../',
+	env: {
+		TYPE: 'f'
+	}	
+});
+
+// One more interesting option is using detached to run the process  completely independently from the parent process
+// Even if the parent process finishes the child one will still be working
+
+const childDetached = spawn('node', ['timer.js'], {
+	stdio: 'ignore',
+	detached: true
+});
+
+childDetached.unref();
