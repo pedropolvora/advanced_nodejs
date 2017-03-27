@@ -20,5 +20,10 @@ There are four different ways of creating a child process in Node.JS:
 
 * [spawn()](scripts/child_processes/spawn.js): By default it does not create a shell to pass the command, so it's a bit more efficient
 * [exec()](scripts/child_processes/exec.js): Does create a shell and buffers the command output and passes it to callback
-* `fork()`:
-* `execFile()`:
+* `execFile()`: Executes a `.sh` file but does not use a shell.
+* [fork()](scripts/child_processes/fork_parent.js): Similar to the spawn method but creates a communication channel between the processes.
+
+## Cluster Module
+
+Creates a master process that forks a number of forked processes that air managed by the master process. 
+
