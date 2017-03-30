@@ -25,5 +25,7 @@ There are four different ways of creating a child process in Node.JS:
 
 ## Cluster Module
 
-Creates a master process that forks a number of forked processes that air managed by the master process. 
+Creates a master process that forks a number of forked processes that are managed by the master process. 
+The master Process manages the workers with a round-robin algorithm.
 
+You can find an example [here](scripts/child_processes/cluster_module/server.js).
