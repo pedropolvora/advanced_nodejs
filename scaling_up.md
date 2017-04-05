@@ -36,3 +36,13 @@ ab -c200 -t10 http://localhost:8080/
 ```
 and compare with the simple [single server](scripts/child_processes/cluster_module/cluster.js)
 
+### Broadcasting Messages
+
+Using the `cluster` module, it is possible to send messages and share information between the master and the workers. We use 
+```javascript
+const cluster = require('cluster');
+cluster.workers[0].send(msg);
+```
+An example can be found [here](scripts/child_processes/cluster_module/clusterMessage.js).
+
+
