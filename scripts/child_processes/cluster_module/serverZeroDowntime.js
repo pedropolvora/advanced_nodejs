@@ -9,8 +9,8 @@ http.createServer((req, res) => {
 });
 
 
-// forcing the worker to crash 
+// forcing the worker to crash, uncomment to activate
 
-setTimeout(() => {
-	process.exit(1);
-}, Math.random()*10000);
+// setTimeout(() => {
+// 	process.exit(1);
+// }, Math.random()*10000);

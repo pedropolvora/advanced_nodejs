@@ -47,6 +47,9 @@ An example can be found [here](scripts/child_processes/cluster_module/clusterMes
 
 ###  Auto re-spawning
 
-We can also make the cluster automatically re-spwan a stopped worked by using the `exit` event e.g. `cluster.on('exit, cb);`.
+We can also make the cluster automatically re-spwan a stopped worked by using the `exit` event e.g. `cluster.on('exit', cb);`. See [an example here](scripts/child_processes/cluster_module/clusterZeroDowntime.js).
+
+
+
 
 
