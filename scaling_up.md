@@ -45,4 +45,8 @@ cluster.workers[0].send(msg);
 ```
 An example can be found [here](scripts/child_processes/cluster_module/clusterMessage.js).
 
+###  Auto re-spawning
+
+We can also make the cluster automatically re-spwan a stopped worked by using the `exit` event e.g. `cluster.on('exit, cb);`.
+
 
