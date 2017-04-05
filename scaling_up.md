@@ -50,6 +50,15 @@ An example can be found [here](scripts/child_processes/cluster_module/clusterMes
 We can also make the cluster automatically re-spwan a stopped worked by using the `exit` event e.g. `cluster.on('exit', cb);`. See [an example here](scripts/child_processes/cluster_module/clusterZeroDowntime.js).
 
 
+### Downsides 
+
+When using a cluster architecture we cannot use standard caching because each worker will have its own memory space and other workers won't be able to access it.
+
+To use a shared memory in this case we can resort to separate entity for caching purposes, an example would be REDIS.
+
+Another way to handle stateful workers is using *sticky load balancing*.
+
+
 
 
 
