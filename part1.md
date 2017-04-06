@@ -6,12 +6,11 @@ Some topics have small explanations, but many are just cheatsheets.
 ### Topics covered
 
 **Part I**
-* [CLI](part1.md#cli-and-repl)
-* [NPM and Semver](part1.md#npm)
-* [Node's Console](part1.md#the-console)
+* [CLI](#cli-and-repl)
+* [NPM and Semver](#npm)
+* [Node's Console](#the-console)
 
 
-* [Sources and links](#sources)
 
 ## CLI and REPL
 Some tips about the command Line interface and Read-Eval-Print Loop (REPL) of Node.js:
@@ -159,12 +158,3 @@ const debuglog = util.debuglog('server');
 debuglog("this message will only pring if node is called with the env var NODE_DEBUG='server'");
 ```
 
-## Sources
-### Advanced Node Course 
-Most of these notes  and scripts come from the [Advanced Node Plurasight Advanced Course](https://app.pluralsight.com/library/courses/nodejs-advanced/table-of-contents)
-
-More resources can be found in [Course's repo](https://github.com/jscomplete/advanced-nodejs)
-
-### Setting-up 
-
-* Run `nvm use` to run the existing `.nvmrvc` file.
