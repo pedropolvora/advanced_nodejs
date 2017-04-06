@@ -1,7 +1,9 @@
-# Node.JS Notes
+# Node.JS Notes - Part I 
 
 Here you can find assorted commands and details on different aspects of node.
 Some topics have small explanations, but many are just cheatsheets.
+
+In this part we focus on the basics, the command line interface, the NPM manager and the console object.
 
 ### Topics covered
 
