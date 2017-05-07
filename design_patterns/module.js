@@ -21,8 +21,8 @@ var testModule = (function () {
 
 // Increment our counter
 testModule.incrementCounter();
-
 // Check the counter value and reset
 // Outputs: 1
 testModule.resetCounter();
+
 
