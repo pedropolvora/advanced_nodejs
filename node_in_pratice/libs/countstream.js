@@ -3,10 +3,10 @@ var util = require('util');
 
 module.exports = CountStream;
 
-util.inherits(CountStream, Writeable);
+util.inherits(CountStream, Writable);
 
 function CountStream(matchText, options){
-	Writeable.call(this, options);
+	Writable.call(this, options);
 	this.count = 0;
 	this.matcher = new RegExp(matchText, 'ig'); // ignore case, match globally
 }
